@@ -1,0 +1,32 @@
+2020-03-10 11:22:35 [main] INFO  com.company.service.AdminServer - 12334
+2020-03-10 11:23:53 [main] INFO  com.company.service.AdminServer - 12334
+2020-03-10 11:23:53 [main] ERROR com.company.service.AdminServer - java.lang.NullPointerException
+2020-03-10 11:25:50 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 11:30:40 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:30 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:36:30 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:30 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:36:30 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:30 [main] INFO  com.company.service.AdminServer - Админ с таким id уже существует
+2020-03-10 11:36:45 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:36:45 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:45 [main] INFO  com.company.service.AdminServer - Админ с таким id уже существует
+2020-03-10 11:48:13 [main] INFO  com.company.service.AdminServer - asdsad
+2020-03-10 11:51:52 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:51:52 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:52:43 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:52:43 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:52:43 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:53:56 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:53:56 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:54:46 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:54:46 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:54:58 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:54:58 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 11:55:08 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:55:08 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 12:07:14 [main] ERROR com.company.service.AdminServer - Введён отрицательный ID
+2020-03-10 12:07:14 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 12:08:08 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 12:08:08 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 12:08:08 [main] INFO  com.company.service.AdminServer - Админ удалён
