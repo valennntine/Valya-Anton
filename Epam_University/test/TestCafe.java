@@ -35,6 +35,7 @@ public class TestCafe {
     public void testDeleteCafe() {
         dao_Cafe.deleteCafe(0);
         Assertions.assertThrows(CafeNotFoundException.class, () -> dao_Cafe.readCafe(0));
+        Assertions.assertEquals(dao_Cafe.readCafe(1).getName(),"");
     }
 
     @Test

@@ -1,0 +1,88 @@
+2020-03-10 18:11:46 [main] WARN  com.company.service.UserService - Введён отрицательный id
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Введён отрицательный ID
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Введён отрицательный ID
+2020-03-10 18:11:46 [main] WARN  com.company.service.UserService - Введён отрицательный id
+2020-03-10 18:11:46 [main] INFO  com.company.service.UserService - Пользователь создан
+2020-03-10 18:11:46 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Введён отрицательный id
+2020-03-10 18:11:46 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-10 18:11:46 [main] INFO  com.company.service.UserService - Пользователь удалён
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-10 18:12:10 [main] WARN  com.company.service.UserService - Введён отрицательный id
+2020-03-10 18:12:34 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-10 18:12:34 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-10 18:12:34 [main] WARN  com.company.service.UserService - Введён отрицательный id
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:19:43 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:19:43 [main] WARN  com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Введён отрицательный ID
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Введён отрицательный ID
+2020-03-10 18:19:43 [main] WARN  com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:19:43 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-03-10 18:19:43 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:19:43 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:19:43 [main] INFO  com.company.service.CafeService - Кафе удалён
+2020-03-10 18:19:43 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:20:10 [main] WARN  com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:21:12 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:22:54 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:22:54 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:22:54 [main] WARN  com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:23:06 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:06 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:23:06 [main] WARN  com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Введён отрицательный ID
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Введён отрицательный ID
+2020-03-10 18:23:06 [main] WARN  com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:23:06 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-03-10 18:23:06 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Введён отрицательный id
+2020-03-10 18:23:06 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:06 [main] INFO  com.company.service.CafeService - Кафе удалён
+2020-03-10 18:23:06 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:23:29 [main] ERROR com.company.service.CafeService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:23:29 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:23:29 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:53 [main] ERROR com.company.service.CafeService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:23:53 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:23:53 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:53 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-10 18:23:53 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-10 18:24:41 [main] WARN  com.company.service.RestaurantService - Введён отрицательный id
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Введён отрицательный ID
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Введён отрицательный ID
+2020-03-10 18:24:41 [main] WARN  com.company.service.RestaurantService - Введён отрицательный id
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан создан
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Введён отрицательный id
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан удалён
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-10 18:24:41 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-10 18:24:41 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Введён отрицательный id
+2020-03-10 18:27:57 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:27:57 [main] INFO  com.company.service.AdminService - Админ удалён
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:27:57 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:27:57 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:27:57 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно

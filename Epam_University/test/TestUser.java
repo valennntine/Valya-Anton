@@ -35,6 +35,7 @@ public class TestUser {
     public void testDeleteUser() {
         dao_User.deleteUser(0);
         Assertions.assertThrows(UserNotFoundException.class, () -> dao_User.readUser(0));
+        Assertions.assertEquals(dao_User.readUser(1).getPassword(), "2");
     }
 
     @Test

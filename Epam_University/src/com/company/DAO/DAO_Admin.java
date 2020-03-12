@@ -58,8 +58,7 @@ public class DAO_Admin {
     }
 
     public void deleteAdmin(long id) {
-        try (BufferedReader reader = new BufferedReader(new FileReader("BD/Admin/AdminBD.txt"));
-             BufferedWriter writer = new BufferedWriter(new FileWriter("BD/Admin/AdminBD.txt"))) {
+        try (BufferedReader reader = new BufferedReader(new FileReader("BD/Admin/AdminBD.txt"))) {
             ArrayList<Admin> admins = new ArrayList<>();
             String id_representation = "";
             while ((id_representation = reader.readLine()) != null) {
@@ -68,12 +67,12 @@ public class DAO_Admin {
                 String password = reader.readLine();
                 admins.add(new Admin(Id, email, password));
             }
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BD/Admin/AdminBD.txt"));
             Admin admin;
             for (Admin value : admins) {
                 admin = value;
                 if (admin.getId() != id) {
-                    writer.write(admin.toString());
-                    writer.newLine();
+                  createAdmin(admin);
                 }
             }
 

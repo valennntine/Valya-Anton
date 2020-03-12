@@ -63,7 +63,7 @@ public class DAO_Cafe {
 
     public void deleteCafe(long id) {
         try (BufferedReader reader = new BufferedReader(new FileReader("BD/Cafe/CafeBD.txt"));
-             BufferedWriter writer = new BufferedWriter(new FileWriter("BD/Cafe/CafeBD.txt"))) {
+             ) {
             ArrayList<Cafe> Cafes = new ArrayList<>();
             String id_representation = "";
             while ((id_representation = reader.readLine()) != null) {
@@ -74,12 +74,12 @@ public class DAO_Cafe {
                 double avgbill = Double.parseDouble(reader.readLine());
                 Cafes.add(new Cafe(Id,name,address,phone,avgbill));
             }
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BD/Cafe/CafeBD.txt"));
             Cafe Cafe;
             for (Cafe value : Cafes) {
                 Cafe = value;
                 if (Cafe.getId() != id) {
-                    writer.write(Cafe.toString());
-                    writer.newLine();
+                    createCafe(Cafe);
                 }
             }
 

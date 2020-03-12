@@ -3,6 +3,7 @@ package com.company.DAO;
 import com.company.exceptions.UserNotFoundException;
 import com.company.model.User;
 
+import javax.jws.soap.SOAPBinding;
 import java.io.*;
 import java.util.ArrayList;
 
@@ -63,7 +64,7 @@ public class DAO_User {
 
     public void deleteUser(long id) {
         try (BufferedReader reader = new BufferedReader(new FileReader("BD/User/UserBD.txt"));
-             BufferedWriter writer = new BufferedWriter(new FileWriter("BD/User/UserBD.txt"))) {
+            ) {
             ArrayList<User> Users = new ArrayList<>();
             String id_representation = "";
             while ((id_representation = reader.readLine()) != null) {
@@ -74,12 +75,12 @@ public class DAO_User {
                 String phoneNumber = reader.readLine();
                 Users.add(new User(Id,email,password,username,phoneNumber));
             }
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BD/User/UserBD.txt"));
             User User;
             for (User value : Users) {
                 User = value;
                 if (User.getId() != id) {
-                    writer.write(User.toString());
-                    writer.newLine();
+                    createUser(User);
                 }
             }
 

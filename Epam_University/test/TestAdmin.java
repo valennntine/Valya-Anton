@@ -35,6 +35,7 @@ public class TestAdmin {
     public void testDeleteAdmin() {
         dao_admin.deleteAdmin(0);
         Assertions.assertThrows(AdminNotFoundException.class, () -> dao_admin.readAdmin(0));
+        Assertions.assertEquals(dao_admin.readAdmin(1).getPassword(),"2");
     }
 
     @Test

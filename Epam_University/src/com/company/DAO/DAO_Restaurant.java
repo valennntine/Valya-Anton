@@ -63,7 +63,7 @@ public class DAO_Restaurant {
 
     public void deleteRestaurant(long id) {
         try (BufferedReader reader = new BufferedReader(new FileReader("BD/Restaurant/RestaurantBD.txt"));
-             BufferedWriter writer = new BufferedWriter(new FileWriter("BD/Restaurant/RestaurantBD.txt"))) {
+             ) {
             ArrayList<Restaurant> Restaurants = new ArrayList<>();
             String id_representation = "";
             while ((id_representation = reader.readLine()) != null) {
@@ -74,12 +74,12 @@ public class DAO_Restaurant {
                 double avgbill = Double.parseDouble(reader.readLine());
                 Restaurants.add(new Restaurant(Id,name,address,phone,avgbill));
             }
+            BufferedWriter writer = new BufferedWriter(new FileWriter("BD/Restaurant/RestaurantBD.txt"));
             Restaurant Restaurant;
             for (Restaurant value : Restaurants) {
                 Restaurant = value;
                 if (Restaurant.getId() != id) {
-                    writer.write(Restaurant.toString());
-                    writer.newLine();
+                    createRestaurant(Restaurant);
                 }
             }
 
