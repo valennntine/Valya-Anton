@@ -24,7 +24,6 @@ public class DAO_Admin {
         }
         return null;
     }
-
     public Admin readAdmin(long id) {
         try (BufferedReader reader = new BufferedReader(new FileReader("BD/Admin/AdminBD.txt"))) {
             String id_representation = "";

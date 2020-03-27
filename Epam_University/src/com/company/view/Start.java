@@ -195,6 +195,7 @@ public class Start {
                                     int numberOfPeople = scanner.nextInt();
                                     System.out.print("Enter code word: ");
                                     String codeWord = scanner.nextLine();
+                                    codeWord = scanner.nextLine();
                                     bookService.createBook(new Book(restaurantService.readRestaurant(idOfRestaurant), idOfBook, dateAndTime, numberOfPeople, codeWord));
                                 }
                                 break;
@@ -217,7 +218,7 @@ public class Start {
                                     int numberOfPeople = scanner.nextInt();
                                     System.out.print("Enter code word: ");
                                     String codeWord = scanner.nextLine();
-                                    bookService.updateBook(new Book(restaurantService.readRestaurant(bookService.readBook(idOfOldBook).getId()),idOfOldBook,dateAndTime,numberOfPeople,codeWord),idOfBook);
+                                    bookService.updateBook(new Book(restaurantService.readRestaurant(bookService.readBook(idOfOldBook).getId()),idOfBook,dateAndTime,numberOfPeople,codeWord),idOfOldBook);
 
                                 }
                                 break;
@@ -232,7 +233,7 @@ public class Start {
                     break;
                 case 3:
                     while (true) {
-                        System.out.println("Выберете действие: ");
+                        System.out.println("Choose, what you want to do: ");
                         System.out.println("1. Create ");
                         System.out.println("2. Read ");
                         System.out.println("3. Delete ");
@@ -246,38 +247,38 @@ public class Start {
                         }
                         switch (k) {
                             case 1:
-                                System.out.println("Введите данные для добавления Администратора в базу");
-                                System.out.print("Введите id Администратора: ");
+                                System.out.println("info:");
+                                System.out.print("Enter id: ");
                                 long id = scanner.nextLong();
-                                System.out.print("Введите email администратора: ");
+                                System.out.print("Enter email: ");
                                 String email = scanner.nextLine();
                                 email = scanner.nextLine();
-                                System.out.print("Введите пароль администратора: ");
+                                System.out.print("Enter password: ");
                                 String password = scanner.nextLine();
                                 adminService.createAdmin(new Admin(id, email, password));
                                 break;
                             case 2:
-                                System.out.println("Введите id администратора, которое хотите Read : ");
+                                System.out.println("Enter id : ");
                                 id = scanner.nextLong();
                                 System.out.println(adminService.readAdmin(id));
                                 break;
                             case 3:
-                                System.out.println("Введите id администратора, которое хотите Delete : ");
+                                System.out.println("Enter id : ");
                                 id = scanner.nextLong();
                                 adminService.deleteAdmin(id);
                                 break;
                             case 4:
-                                System.out.println("Введите id администратора, которое хотите Update : ");
+                                System.out.println("Enter id for update: ");
                                 long idOld = scanner.nextLong();
                                 System.out.println(adminService.readAdmin(idOld));
                                 if (adminService.readAdmin(idOld) != null) {
-                                    System.out.println("Введите данные для обновления администратора");
-                                    System.out.print("Введите id администратора: ");
+                                    System.out.println("Enter data for update");
+                                    System.out.print("Enter id: ");
                                     long idNew = scanner.nextLong();
-                                    System.out.print("Введите email администратора: ");
+                                    System.out.print("Enter email: ");
                                     email = scanner.nextLine();
                                     email = scanner.nextLine();
-                                    System.out.print("Введите пароль администратора: ");
+                                    System.out.print("Enter password: ");
                                     password = scanner.nextLine();
                                     adminService.updateAdmin(new Admin(idNew, email, password), idOld);
                                 }
@@ -294,7 +295,7 @@ public class Start {
                     break;
                 case 4:
                     while (true) {
-                        System.out.println("Выберете действие: ");
+                        System.out.println("Choose, what you want to do: ");
                         System.out.println("1. Create ");
                         System.out.println("2. Read ");
                         System.out.println("3. Delete ");
@@ -308,48 +309,48 @@ public class Start {
                         }
                         switch (k) {
                             case 1:
-                                System.out.println("Введите данные для добавления Пользователя в базу");
-                                System.out.print("Введите id пользователя: ");
+                                System.out.println("Info:");
+                                System.out.print("Enter id: ");
                                 long id = scanner.nextLong();
-                                System.out.print("Введите email пользователя: ");
+                                System.out.print("Enter email: ");
                                 String email = scanner.nextLine();
                                 email = scanner.nextLine();
-                                System.out.print("Введите пароль пользователя: ");
+                                System.out.print("Enter password: ");
                                 String password = scanner.nextLine();
-                                System.out.print("Введите имя пользователя: ");
+                                System.out.print("Enter Username: ");
                                 String username = scanner.nextLine();
-                                System.out.print("Введите номер телефона пользователя: ");
-                                String phonenumber = scanner.nextLine();
-                                userService.createUser(new User(id, email, password, username, phonenumber));
+                                System.out.print("Enter phone number: ");
+                                String phoneNumber = scanner.nextLine();
+                                userService.createUser(new User(id, email, password, username, phoneNumber));
                                 break;
                             case 2:
-                                System.out.println("Введите id пользователя, которое хотите Read : ");
+                                System.out.println("Enter id : ");
                                 id = scanner.nextLong();
                                 System.out.println(userService.readUser(id));
                                 break;
                             case 3:
-                                System.out.println("Введите id пользователя, которое хотите Delete : ");
+                                System.out.println("Enter id: ");
                                 id = scanner.nextLong();
                                 userService.deleteUser(id);
                                 break;
                             case 4:
-                                System.out.println("Введите id пользователя, которое хотите Update : ");
+                                System.out.println("Enter id for update : ");
                                 long idOld = scanner.nextLong();
                                 System.out.println(userService.readUser(idOld));
                                 if (userService.readUser(idOld) != null) {
-                                    System.out.println("Введите данные для обновления пользователя");
-                                    System.out.print("Введите id пользователя: ");
+                                    System.out.println("Enter data for update");
+                                    System.out.print("Enter id: ");
                                     long idNew = scanner.nextLong();
-                                    System.out.print("Введите email пользователя: ");
+                                    System.out.print("Enter email: ");
                                     email = scanner.nextLine();
                                     email = scanner.nextLine();
-                                    System.out.print("Введите пароль пользователя: ");
+                                    System.out.print("Enter password: ");
                                     password = scanner.nextLine();
-                                    System.out.print("Введите имя пользователя: ");
+                                    System.out.print("Enter Username: ");
                                     username = scanner.nextLine();
-                                    System.out.print("Введите номер телефона пользователя: ");
-                                    phonenumber = scanner.nextLine();
-                                    userService.updateUser(new User(idNew, email, password, username, phonenumber), idOld);
+                                    System.out.print("Enter phone number: ");
+                                    phoneNumber = scanner.nextLine();
+                                    userService.updateUser(new User(idNew, email, password, username, phoneNumber), idOld);
                                 }
                                 break;
                             case 5:

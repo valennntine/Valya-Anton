@@ -1,0 +1,93 @@
+2020-03-12 14:20:42 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-03-12 14:20:46 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-03-12 14:20:49 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-12 14:20:57 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-12 14:21:06 [main] INFO  com.company.service.CafeService - Кафе удалён
+2020-03-12 14:21:24 [main] INFO  com.company.service.RestaurantService - Ресторан создан
+2020-03-12 14:21:50 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:21:50 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:22:02 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:22:02 [main] INFO  com.company.service.BookService - Админ создан
+2020-03-12 14:23:45 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:23:45 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:23:49 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:23:49 [main] INFO  com.company.service.BookService - Админ создан
+2020-03-12 14:23:53 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:25:18 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:25:18 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:25:24 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:25:24 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:25:24 [main] ERROR com.company.service.BookService - Брони с таким id не существует
+2020-03-12 14:25:29 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:25:43 [main] ERROR com.company.service.BookService - Данной брони не существует
+2020-03-12 14:25:54 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:25:54 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:26:03 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:26:03 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:26:03 [main] ERROR com.company.service.BookService - Брони с таким id не существует
+2020-03-12 14:26:06 [main] ERROR com.company.service.BookService - Данной брони не существует
+2020-03-12 14:27:30 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:27:34 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:27:34 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:27:37 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:27:37 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-12 14:27:48 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:28:55 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:29:01 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:29:15 [main] INFO  com.company.service.BookService - Бронь удалена
+2020-03-12 14:29:20 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:30:53 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-03-12 14:32:10 [main] INFO  com.company.service.BookService - Бронь удалена
+2020-03-24 12:11:02 [main] ERROR com.company.service.AdminService - Введён отрицательный id
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ удалён
+2020-03-24 12:11:02 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-24 12:11:02 [main] ERROR com.company.service.AdminService - Введён отрицательный id или данные введены не корректно
+2020-03-24 12:11:02 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-24 12:11:02 [main] ERROR com.company.service.AdminService - Админ с таким ID уже сущетсвует
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.CafeService - Введён отрицательный id или данные введены не корректно
+2020-03-24 12:11:02 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-24 12:11:02 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-24 12:11:02 [main] ERROR com.company.service.CafeService - Кафе с таким ID уже сущетсвует
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-24 12:11:02 [main] ERROR com.company.service.CafeService - Введён отрицательный id
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-03-24 12:11:02 [main] INFO  com.company.service.CafeService - Кафе удалён
+2020-03-24 12:11:02 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] WARN  com.company.service.RestaurantService - Введён отрицательный id
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Введён отрицательный ID
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Введён отрицательный ID
+2020-03-24 12:11:02 [main] WARN  com.company.service.RestaurantService - Введён отрицательный id
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан создан
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Введён отрицательный id
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан удалён
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Введён отрицательный id или данные введены не корректно
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] ERROR com.company.service.UserService - Введён отрицательный id или данные введены не корректно
+2020-03-24 12:11:02 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-24 12:11:02 [main] ERROR com.company.service.UserService - Пользователь с таким ID уже сущетсвует
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён

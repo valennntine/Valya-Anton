@@ -54,7 +54,7 @@ public class DAO_Book {
             Book Book;
             for (Book value : Books) {
                 Book = value;
-                if (Book.getId() != id) {
+                if (Book.getIdOfBook() != id) {
                     createBook(Book);
                 }
             }
