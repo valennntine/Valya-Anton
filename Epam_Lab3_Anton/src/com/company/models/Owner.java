@@ -3,9 +3,9 @@ package com.company.models;
 import java.util.List;
 
 public class Owner {
-    String name;
-    String location;
-    List<Aircraft> aircraftList;
+    private String name;
+    private String location;
+    private List<Aircraft> aircraftList;
 
     public List<Aircraft> getAircraftList() {
         return aircraftList;

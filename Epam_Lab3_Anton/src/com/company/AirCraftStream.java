@@ -14,8 +14,8 @@ import java.util.stream.Collectors;
 import static java.util.stream.Collectors.toList;
 
 public class AirCraftStream {
-    AllAircfats allAircfats;
-    AllOwners allOwners;
+    private AllAircfats allAircfats;
+    private AllOwners allOwners;
     public AirCraftStream(){
         allAircfats = new AllAircfats();
         allOwners = new AllOwners();

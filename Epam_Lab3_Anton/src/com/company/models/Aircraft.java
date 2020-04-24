@@ -2,10 +2,10 @@ package com.company.models;
 import java.util.List;
 
 public class Aircraft {
-    String name;
-    int price;
-    int capacity;
-    List<Owner> stores;
+    private String name;
+    private int price;
+    private int capacity;
+    private List<Owner> stores;
 
     public List<Owner> getStores() {
         return stores;
