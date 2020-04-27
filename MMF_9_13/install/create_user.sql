@@ -1,10 +1,8 @@
-prompt**************
-prompt Script: create_schema.sql
-prompt**************
-
 define SCHEMA_NAME = &&1
 define SCHEMA_PASSWORD = &&2
 define DEFAULT_TBS = &&3
+
+alter session set "_ORACLE_SCRIPT"=true;
 
 CREATE USER &&SCHEMA_NAME
   IDENTIFIED BY &&SCHEMA_PASSWORD

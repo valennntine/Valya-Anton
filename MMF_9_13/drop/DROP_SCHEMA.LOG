@@ -1,0 +1,20 @@
+Username caling to drop_user: valya
+
+
+Session altered.
+
+Elapsed: 00:00:00.00
+old   1: DROP USER &&USER_NAME_DROP CASCADE
+new   1: DROP USER valya CASCADE
+
+User dropped.
+
+Elapsed: 00:00:00.18
+Username caling to drop_tablspace: valya_DATA
+
+old   1: DROP TABLESPACE &&TABLESPACE_NAME
+new   1: DROP TABLESPACE valya_DATA
+
+Tablespace dropped.
+
+Elapsed: 00:00:03.26

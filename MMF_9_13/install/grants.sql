@@ -1,8 +1,3 @@
-prompt**************
-prompt Script: privilege_schema.sql
-prompt**************
-
-
 DEFINE SCHEMA_NAME = &&1
 
 GRANT CREATE PROCEDURE TO &&SCHEMA_NAME;

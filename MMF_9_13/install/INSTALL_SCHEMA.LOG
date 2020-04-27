@@ -1,0 +1,88 @@
+*********
+Username to create: valya
+
+Path of datafile location: D:\Oracle\app\user\oradata\ORCL\DATAFILE\
+
+Calling create_tablespace.sql for data tablespace
+*********
+valya_DATA
+D:\Oracle\app\user\oradata\ORCL\DATAFILE\valya_DATA.dbf
+old   1: CREATE TABLESPACE  &&DATA_TBS_NAME
+new   1: CREATE TABLESPACE  valya_DATA
+old   3:         '&&DATA_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   3:         'D:\Oracle\app\user\oradata\ORCL\DATAFILE\valya_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+
+Tablespace created.
+
+Elapsed: 00:00:02.39
+
+*********
+Calling create_user.sql
+*********
+
+Session altered.
+
+Elapsed: 00:00:00.00
+old   1: CREATE USER &&SCHEMA_NAME
+new   1: CREATE USER valya
+old   2:   IDENTIFIED BY &&SCHEMA_PASSWORD
+new   2:   IDENTIFIED BY oracle
+old   3:   DEFAULT TABLESPACE &&DEFAULT_TBS
+new   3:   DEFAULT TABLESPACE valya_DATA
+old   5:     QUOTA 20M on &&DEFAULT_TBS
+new   5:     QUOTA 20M on valya_DATA
+
+User created.
+
+Elapsed: 00:00:00.06
+*********
+Calling grant.sql for valya
+*********
+old   1: GRANT CREATE PROCEDURE TO &&SCHEMA_NAME
+new   1: GRANT CREATE PROCEDURE TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE SEQUENCE TO &&SCHEMA_NAME
+new   1: GRANT CREATE SEQUENCE TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE TABLE TO &&SCHEMA_NAME
+new   1: GRANT CREATE TABLE TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE TYPE TO &&SCHEMA_NAME
+new   1: GRANT CREATE TYPE TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE TRIGGER TO &&SCHEMA_NAME
+new   1: GRANT CREATE TRIGGER TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE SYNONYM TO &&SCHEMA_NAME
+new   1: GRANT CREATE SYNONYM TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE SESSION TO &&SCHEMA_NAME
+new   1: GRANT CREATE SESSION TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE ANY DIRECTORY TO &&SCHEMA_NAME
+new   1: GRANT CREATE ANY DIRECTORY TO valya
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
