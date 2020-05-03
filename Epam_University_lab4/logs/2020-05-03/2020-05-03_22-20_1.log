@@ -1,0 +1,98 @@
+2020-03-24 12:11:02 [main] ERROR com.company.service.UserService - Введён отрицательный id
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь удалён
+2020-03-24 12:11:02 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-24 12:11:02 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-24 12:13:26 [main] ERROR com.company.service.AdminService - Админ с таким ID уже сущетсвует
+2020-03-24 12:13:26 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-05-03 17:58:07 [main] ERROR com.company.service.BookService - Данной брони не существует
+2020-05-03 17:58:31 [main] ERROR com.company.service.RestaurantService - Данного Пользователя не существует
+2020-05-03 17:58:47 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-05-03 17:58:47 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-05-03 17:58:58 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-05-03 17:58:58 [main] INFO  com.company.service.BookService - Админ создан
+2020-05-03 17:59:07 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-05-03 19:06:28 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:07:26 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:08:05 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:10:01 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:10:39 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:11:00 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:14:25 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:15:22 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:15:45 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:16:19 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: No suitable driver found for jdbc:oracle:thin:@localhost:1521:orcl
+2020-05-03 19:21:25 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLException: Не выполнен вызов ResultSet.next
+2020-05-03 19:27:01 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00923: ключевое слово FROM не найдено там, где оно ожидалось
+
+2020-05-03 19:27:16 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00942: таблица или представление пользователя не существует
+
+2020-05-03 19:30:48 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00942: таблица или представление пользователя не существует
+
+2020-05-03 19:39:11 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00942: таблица или представление пользователя не существует
+
+2020-05-03 19:39:23 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00942: таблица или представление пользователя не существует
+
+2020-05-03 20:17:44 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00984: употребление столбца здесь недопустимо
+
+2020-05-03 20:19:01 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00933: неверное завершение SQL-предложения
+
+2020-05-03 20:19:53 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLSyntaxErrorException: ORA-00933: неверное завершение SQL-предложения
+
+2020-05-03 20:20:14 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLIntegrityConstraintViolationException: ORA-00001: нарушено ограничение уникальности (MMF_9_13.PK_ADMINS)
+
+2020-05-03 20:43:01 [main] FATAL com.company.dbdao.DaoAdmin - java.sql.SQLIntegrityConstraintViolationException: ORA-00001: нарушено ограничение уникальности (MMF_9_13.PK_ADMINS)
+
+2020-05-03 20:53:37 [main] ERROR com.company.service.AdminService - Админ с таким ID уже сущетсвует
+2020-05-03 20:53:47 [main] INFO  com.company.service.AdminService - Админ удалён
+2020-05-03 20:53:54 [main] ERROR com.company.service.AdminService - Админ с таким ID уже сущетсвует
+2020-05-03 20:54:09 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-05-03 20:58:32 [main] INFO  com.company.service.AdminService - Админ создан
+2020-05-03 20:58:42 [main] ERROR com.company.service.AdminService - Админ с таким ID уже сущетсвует
+2020-05-03 20:58:57 [main] INFO  com.company.service.AdminService - Админ создан
+2020-05-03 20:59:08 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-05-03 20:59:08 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-05-03 21:30:07 [main] FATAL com.company.dbdao.DaoCafe - java.sql.SQLSyntaxErrorException: ORA-01722: неверное число
+
+2020-05-03 21:30:07 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:30:25 [main] FATAL com.company.dbdao.DaoCafe - java.sql.SQLSyntaxErrorException: ORA-01722: неверное число
+
+2020-05-03 21:30:25 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:30:56 [main] FATAL com.company.dbdao.DaoCafe - java.sql.SQLSyntaxErrorException: ORA-01722: неверное число
+
+2020-05-03 21:30:56 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:31:04 [main] ERROR com.company.service.CafeService - Данного Кафе не существует
+2020-05-03 21:31:28 [main] FATAL com.company.dbdao.DaoUser - java.sql.SQLSyntaxErrorException: ORA-00904: "USERNAME": недопустимый идентификатор
+
+2020-05-03 21:31:28 [main] INFO  com.company.service.UserService - Пользователь создан
+2020-05-03 21:32:37 [main] INFO  com.company.service.UserService - Пользователь создан
+2020-05-03 21:32:41 [main] FATAL com.company.dbdao.DaoUser - java.sql.SQLException: Недопустимое имя столбца
+2020-05-03 21:32:47 [main] FATAL com.company.dbdao.DaoUser - java.sql.SQLException: Недопустимое имя столбца
+2020-05-03 21:33:16 [main] INFO  com.company.service.UserService - Пользователь создан
+2020-05-03 21:33:23 [main] INFO  com.company.service.UserService - Пользователь удалён
+2020-05-03 21:33:27 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-05-03 21:33:35 [main] INFO  com.company.service.UserService - Пользователь создан
+2020-05-03 21:34:01 [main] FATAL com.company.dbdao.DaoCafe - java.sql.SQLSyntaxErrorException: ORA-01722: неверное число
+
+2020-05-03 21:34:01 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:38:28 [main] FATAL com.company.dbdao.DaoCafe - java.sql.SQLSyntaxErrorException: ORA-01722: неверное число
+
+2020-05-03 21:38:28 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:39:31 [main] FATAL com.company.dbdao.DaoCafe - java.sql.SQLSyntaxErrorException: ORA-01722: неверное число
+
+2020-05-03 21:39:31 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:40:36 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 21:40:43 [main] ERROR com.company.service.CafeService - Кафе с таким ID уже сущетсвует
+2020-05-03 21:40:48 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-05-03 21:40:51 [main] INFO  com.company.service.CafeService - Кафе удалён
+2020-05-03 21:41:16 [main] INFO  com.company.service.RestaurantService - Ресторан создан
+2020-05-03 21:41:31 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-05-03 21:41:31 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-05-03 21:41:38 [main] INFO  com.company.service.RestaurantService - Ресторан возвращён
+2020-05-03 21:41:38 [main] INFO  com.company.service.BookService - Админ создан
+2020-05-03 21:41:55 [main] INFO  com.company.service.BookService - Бронь возвращён
+2020-05-03 21:42:00 [main] INFO  com.company.service.BookService - Бронь удалена
+2020-05-03 21:42:04 [main] ERROR com.company.service.BookService - Данной брони не существует
+2020-05-03 22:15:12 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 22:15:18 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-05-03 22:15:18 [main] INFO  com.company.service.CafeService - Кафе возвращено

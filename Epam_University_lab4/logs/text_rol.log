@@ -1,0 +1,8 @@
+2020-05-03 22:20:43 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 22:20:49 [main] ERROR com.company.service.CafeService - Кафе с таким ID уже сущетсвует
+2020-05-03 22:20:55 [main] INFO  com.company.service.CafeService - Кафе создан
+2020-05-03 22:21:03 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-05-03 22:21:08 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-05-03 22:21:15 [main] INFO  com.company.service.CafeService - Кафе удалён
+2020-05-03 22:21:35 [main] INFO  com.company.service.CafeService - Кафе возвращено
+2020-05-03 22:21:35 [main] INFO  com.company.service.CafeService - Кафе возвращено

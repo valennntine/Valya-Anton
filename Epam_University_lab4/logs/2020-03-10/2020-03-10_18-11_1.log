@@ -1,0 +1,89 @@
+2020-03-10 11:22:35 [main] INFO  com.company.service.AdminServer - 12334
+2020-03-10 11:23:53 [main] INFO  com.company.service.AdminServer - 12334
+2020-03-10 11:23:53 [main] ERROR com.company.service.AdminServer - java.lang.NullPointerException
+2020-03-10 11:25:50 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 11:30:40 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:30 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:36:30 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:30 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:36:30 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:30 [main] INFO  com.company.service.AdminServer - Админ с таким id уже существует
+2020-03-10 11:36:45 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:36:45 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:36:45 [main] INFO  com.company.service.AdminServer - Админ с таким id уже существует
+2020-03-10 11:48:13 [main] INFO  com.company.service.AdminServer - asdsad
+2020-03-10 11:51:52 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:51:52 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:52:43 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:52:43 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 11:52:43 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:53:56 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:53:56 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:54:46 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:54:46 [main] ERROR com.company.service.AdminServer - Данного админа не существует
+2020-03-10 11:54:58 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:54:58 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 11:55:08 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 11:55:08 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 12:07:14 [main] ERROR com.company.service.AdminServer - Введён отрицательный ID
+2020-03-10 12:07:14 [main] WARN  com.company.service.AdminServer - Введён отрицательный id
+2020-03-10 12:08:08 [main] INFO  com.company.service.AdminServer - Админ создан
+2020-03-10 12:08:08 [main] INFO  com.company.service.AdminServer - Админ возвращён
+2020-03-10 12:08:08 [main] INFO  com.company.service.AdminServer - Админ удалён
+2020-03-10 17:16:57 [main] WARN  com.company.service.AdminService - Введён отрицательный id
+2020-03-10 17:17:42 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:17:42 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:18:30 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:18:30 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:19:39 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:19:39 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:19:51 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:19:51 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:19:58 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:20:18 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:20:18 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:20:32 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:20:32 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:20:32 [main] WARN  com.company.service.AdminService - Введён отрицательный id
+2020-03-10 17:35:55 [main] ERROR com.company.service.AdminService - Введён отрицательный ID
+2020-03-10 17:36:38 [main] ERROR com.company.service.AdminService - Введён отрицательный ID
+2020-03-10 17:38:54 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:39:56 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:41:26 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:41:35 [main] INFO  com.company.service.AdminService - Админ создан
+2020-03-10 17:41:35 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:41:48 [main] ERROR com.company.service.AdminService - Админ с таким ID уже сущетсвует
+2020-03-10 17:41:48 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:41:48 [main] INFO  com.company.service.AdminService - Админ удалён
+2020-03-10 17:42:17 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:42:17 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:42:17 [main] ERROR com.company.service.AdminService - Админа с таким ID не сужествует
+2020-03-10 17:43:10 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:43:10 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:43:10 [main] ERROR com.company.service.AdminService - Админа с таким ID не сужествует
+2020-03-10 17:43:18 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:43:18 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:43:18 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:43:18 [main] WARN  com.company.service.AdminService - Введён отрицательный id
+2020-03-10 17:43:18 [main] INFO  com.company.service.AdminService - Админ создан
+2020-03-10 17:43:18 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 17:45:05 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:45:05 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 17:45:05 [main] ERROR com.company.service.AdminService - Введён отрицательный ID или данные введены не корректно
+2020-03-10 17:45:05 [main] WARN  com.company.service.AdminService - Введён отрицательный id
+2020-03-10 17:45:05 [main] INFO  com.company.service.AdminService - Админ создан
+2020-03-10 17:45:05 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:00:42 [main] ERROR com.company.service.AdminService - Введён отрицательный id
+2020-03-10 18:00:42 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:00:42 [main] INFO  com.company.service.AdminService - Админ удалён
+2020-03-10 18:00:42 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:09:58 [main] ERROR com.company.service.AdminService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:09:58 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:09:58 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:09:58 [main] INFO  com.company.service.AdminService - Админ возвращён
+2020-03-10 18:09:58 [main] ERROR com.company.service.AdminService - Данного админа не существует
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Введён отрицательный id или данные введены не корректно
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
+2020-03-10 18:11:46 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-10 18:11:46 [main] INFO  com.company.service.UserService - Пользователь возвращён
+2020-03-10 18:11:46 [main] ERROR com.company.service.UserService - Данного Пользователя не существует
