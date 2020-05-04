@@ -1,6 +1,7 @@
 package com.company;
 
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Main {
@@ -34,11 +35,12 @@ public class Main {
         Arrays.stream(users).forEach(u -> System.out.println(u.toString()));
 
         Handler handler = new Handler();
+        System.out.println(Arrays.toString(handler.maxPostsUsers(users)));
+        System.out.println(handler.userPostsMoreThan(users));
         System.out.println("Result: " + Arrays.toString(handler.minPostsUsers(users)));
+        System.out.println(Arrays.toString(handler.maxPostsUsers(users)));
+        System.out.println(Arrays.toString(handler.postsDistinctList(users)));
 
-        Arrays.stream(users).filter(u -> u.getPosts().size() == 1);
-
-        Arrays.stream(users).parallel().filter(u -> u.getPosts().size() == 1);
 
     }
 }
