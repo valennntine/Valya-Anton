@@ -1,0 +1,32 @@
+Username calling to drop_user: sss
+
+
+Session altered.
+
+Elapsed: 00:00:00.00
+old   1: DROP USER "&&USER_NAME" CASCADE
+new   1: DROP USER "sss" CASCADE
+DROP USER "sss" CASCADE
+          *
+ERROR at line 1:
+ORA-01918: user 'sss' does not exist 
+
+
+Elapsed: 00:00:00.12
+Username caling to drop_tablspace: 'sss_DATA'
+
+old   1: DROP TABLESPACE "&&TABLESPACE_NAME"
+new   1: DROP TABLESPACE "sss_DATA"
+DROP TABLESPACE "sss_DATA"
+*
+ERROR at line 1:
+ORA-00959: tablespace 'sss_DATA' does not exist 
+
+
+Elapsed: 00:00:00.01
+old   1: DROP TABLESPACE "&&INDEX_NAME"
+new   1: DROP TABLESPACE "sss_IDX"
+
+Tablespace dropped.
+
+Elapsed: 00:00:01.49

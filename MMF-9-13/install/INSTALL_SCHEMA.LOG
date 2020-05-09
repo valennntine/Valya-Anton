@@ -1,20 +1,28 @@
 *********
-Username to create: valya
+Username to create: sss
 
 Path of datafile location: D:\Oracle\app\user\oradata\ORCL\DATAFILE\
 
 Calling create_tablespace.sql for data tablespace
 *********
-valya_DATA
-D:\Oracle\app\user\oradata\ORCL\DATAFILE\valya_DATA.dbf
+sss_DATA
+D:\Oracle\app\user\oradata\ORCL\DATAFILE\sss_DATA.dbf
 old   1: CREATE TABLESPACE  &&DATA_TBS_NAME
-new   1: CREATE TABLESPACE  valya_DATA
+new   1: CREATE TABLESPACE  sss_DATA
 old   3:         '&&DATA_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
-new   3:         'D:\Oracle\app\user\oradata\ORCL\DATAFILE\valya_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   3:         'D:\Oracle\app\user\oradata\ORCL\DATAFILE\sss_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 
 Tablespace created.
 
-Elapsed: 00:00:02.39
+Elapsed: 00:00:00.85
+old   1: CREATE TABLESPACE "&&INDEX_NAME"
+new   1: CREATE TABLESPACE "sss_IDX"
+old   3:         '&&INDEX_FILENAME' SIZE 10M AUTOEXTEND ON NEXT 100M MAXSIZE 10G
+new   3:         'D:\Oracle\app\user\oradata\ORCL\DATAFILE\sss_IDX.DBF' SIZE 10M AUTOEXTEND ON NEXT 100M MAXSIZE 10G
+
+Tablespace created.
+
+Elapsed: 00:00:00.43
 
 *********
 Calling create_user.sql
@@ -23,65 +31,63 @@ Calling create_user.sql
 Session altered.
 
 Elapsed: 00:00:00.00
-old   1: CREATE USER &&SCHEMA_NAME
-new   1: CREATE USER valya
-old   2:   IDENTIFIED BY &&SCHEMA_PASSWORD
-new   2:   IDENTIFIED BY oracle
+old   1: CREATE USER &&USER_NAME
+new   1: CREATE USER sss
 old   3:   DEFAULT TABLESPACE &&DEFAULT_TBS
-new   3:   DEFAULT TABLESPACE valya_DATA
+new   3:   DEFAULT TABLESPACE sss_DATA
 old   5:     QUOTA 20M on &&DEFAULT_TBS
-new   5:     QUOTA 20M on valya_DATA
+new   5:     QUOTA 20M on sss_DATA
 
 User created.
 
-Elapsed: 00:00:00.06
+Elapsed: 00:00:00.15
 *********
-Calling grant.sql for valya
+Calling grant.sql for sss
 *********
 old   1: GRANT CREATE PROCEDURE TO &&SCHEMA_NAME
-new   1: GRANT CREATE PROCEDURE TO valya
+new   1: GRANT CREATE PROCEDURE TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE SEQUENCE TO &&SCHEMA_NAME
-new   1: GRANT CREATE SEQUENCE TO valya
+new   1: GRANT CREATE SEQUENCE TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE TABLE TO &&SCHEMA_NAME
-new   1: GRANT CREATE TABLE TO valya
+new   1: GRANT CREATE TABLE TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE TYPE TO &&SCHEMA_NAME
-new   1: GRANT CREATE TYPE TO valya
+new   1: GRANT CREATE TYPE TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE TRIGGER TO &&SCHEMA_NAME
-new   1: GRANT CREATE TRIGGER TO valya
+new   1: GRANT CREATE TRIGGER TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE SYNONYM TO &&SCHEMA_NAME
-new   1: GRANT CREATE SYNONYM TO valya
+new   1: GRANT CREATE SYNONYM TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE SESSION TO &&SCHEMA_NAME
-new   1: GRANT CREATE SESSION TO valya
+new   1: GRANT CREATE SESSION TO sss
 
 Grant succeeded.
 
 Elapsed: 00:00:00.00
 old   1: GRANT CREATE ANY DIRECTORY TO &&SCHEMA_NAME
-new   1: GRANT CREATE ANY DIRECTORY TO valya
+new   1: GRANT CREATE ANY DIRECTORY TO sss
 
 Grant succeeded.
 

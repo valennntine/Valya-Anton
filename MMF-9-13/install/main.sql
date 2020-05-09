@@ -7,8 +7,6 @@ PROMPT Enter username
 DEFINE USER_NAME = &&1
 PROMPT Enter tablespace location
 DEFINE TBS_LOCATION =  &&2
-PROMPT Enter password
-DEFINE SCHEMA_PASSWORD = 'oracle'
  
 SPOOL INSTALL_SCHEMA.LOG
 
@@ -28,7 +26,7 @@ PROMPT *********
 PROMPT Calling create_user.sql 
 PROMPT *********
 
-@create_user.sql &&USER_NAME &&SCHEMA_PASSWORD '&&USER_NAME._DATA' 
+@create_user.sql &&USER_NAME '&&USER_NAME._DATA' 
 
 PROMPT *********
 PROMPT Calling grant.sql for &&USER_NAME
@@ -40,7 +38,6 @@ SET SERVEROUTPUT OFF
 
 UNDEFINE USER_NAME;
 UNDEFINE TBS_LOCATION;
-UNDEFINE SCHEMA_PASSWORD;
 
 
 SPOOL OFF
