@@ -59,10 +59,8 @@ public class Handler {
 
     }
     public void postsShowList(User[] users){
-        List<Post> posts = new ArrayList();
         Arrays.stream(users).forEach(
                 o -> {
-                    posts.addAll(o.getPosts());
                     System.out.println( o.getPosts());
                 }
         );

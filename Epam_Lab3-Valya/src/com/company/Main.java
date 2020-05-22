@@ -8,9 +8,9 @@ public class Main {
 
     public static void main(String[] args) {
         User[] users = new User[3];
-        users[0] = new User("A", 1);
-        users[1] = new User("B", 2);
-        users[2] = new User("C", 3);
+        users[0] = new User("AA", 1);
+        users[1] = new User("BB", 2);
+        users[2] = new User("CC", 3);
 
         Post[] posts = new Post[3];
         posts[0] = new Post("1");
@@ -31,7 +31,6 @@ public class Main {
         users[1].likePost(posts[0]);
         users[2].likePost(posts[1]);
 
-        Arrays.stream(users).forEach(u -> System.out.println(u.toString()));
         Arrays.stream(users).forEach(u -> System.out.println(u.toString()));
 
         Handler handler = new Handler();
