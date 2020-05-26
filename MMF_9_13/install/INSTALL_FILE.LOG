@@ -1,0 +1,101 @@
+Enter value for 1: MMF_9_13
+Enter value for 2: c:\users\xiaomi\desktop\hackerc\
+"execute create_tablespace.sql for data tablespace"
+"user_name = MMF_9_13"
+"file location = c:\users\xiaomi\desktop\hackerc\"
+old   1: CREATE TABLESPACE &&DATA_TBSP_NAME
+new   1: CREATE TABLESPACE MMF_9_13_DATA
+old   2:     DATAFILE '&&DATA_FILE_NAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   2:     DATAFILE 'c:\users\xiaomi\desktop\hackerc\MMF_9_13_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+
+Tablespace created.
+
+Elapsed: 00:00:00.06
+"execute create_tablespace.sql for index tablespace"
+"user_name = MMF_9_13"
+"file location = c:\users\xiaomi\desktop\hackerc\"
+old   1: CREATE TABLESPACE &&DATA_TBSP_NAME
+new   1: CREATE TABLESPACE MMF_9_13_IDX
+old   2:     DATAFILE '&&DATA_FILE_NAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   2:     DATAFILE 'c:\users\xiaomi\desktop\hackerc\MMF_9_13_IDX.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+
+Tablespace created.
+
+Elapsed: 00:00:00.05
+old   1: CREATE USER &&USER_NAME
+new   1: CREATE USER MMF_9_13
+old   3:     DEFAULT TABLESPACE &&USER_NAME._DATA
+new   3:     DEFAULT TABLESPACE MMF_9_13_DATA
+CREATE USER MMF_9_13
+            *
+ERROR at line 1:
+ORA-01920: user name 'MMF_9_13' conflicts with another user or role name 
+
+
+Elapsed: 00:00:00.00
+old   1: ALTER USER &&USER_NAME QUOTA UNLIMITED ON &&USER_NAME._DATA
+new   1: ALTER USER MMF_9_13 QUOTA UNLIMITED ON MMF_9_13_DATA
+
+User altered.
+
+Elapsed: 00:00:00.02
+old   1: ALTER USER &&USER_NAME QUOTA UNLIMITED ON &&USER_NAME._IDX
+new   1: ALTER USER MMF_9_13 QUOTA UNLIMITED ON MMF_9_13_IDX
+
+User altered.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE PROCEDURE TO &&USER_NAME
+new   1: GRANT CREATE PROCEDURE TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.01
+old   1: GRANT CREATE SEQUENCE TO &&USER_NAME
+new   1: GRANT CREATE SEQUENCE TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE TABLE TO &&USER_NAME
+new   1: GRANT CREATE TABLE TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE TYPE TO &&USER_NAME
+new   1: GRANT CREATE TYPE TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE TRIGGER TO &&USER_NAME
+new   1: GRANT CREATE TRIGGER TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE SYNONYM TO &&USER_NAME
+new   1: GRANT CREATE SYNONYM TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE SESSION TO &&USER_NAME
+new   1: GRANT CREATE SESSION TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE ANY DIRECTORY TO &&USER_NAME
+new   1: GRANT CREATE ANY DIRECTORY TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00
+old   1: GRANT CREATE VIEW TO &&USER_NAME
+new   1: GRANT CREATE VIEW TO MMF_9_13
+
+Grant succeeded.
+
+Elapsed: 00:00:00.00

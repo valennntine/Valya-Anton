@@ -1,0 +1,26 @@
+'run drop_schema with param user_name = MMF_9_13'
+old   1: DROP USER &&USER_NAME CASCADE
+new   1: DROP USER MMF_9_13 CASCADE
+DROP USER MMF_9_13 CASCADE
+*
+ERROR at line 1:
+ORA-01940: cannot drop a user that is currently connected 
+
+
+Elapsed: 00:00:00.04
+'MMF_9_13 dropped'
+'run drop_tablespace.sql with param user_name = MMF_9_13'
+old   1: DROP TABLESPACE &&TBS_DATA_NAME
+new   1: DROP TABLESPACE MMF_9_13_DATA
+
+Tablespace dropped.
+
+Elapsed: 00:00:00.54
+'MMF_9_13_DATA dropped'
+old   1: DROP TABLESPACE &&TBS_IDX_NAME
+new   1: DROP TABLESPACE MMF_9_13_IDX
+
+Tablespace dropped.
+
+Elapsed: 00:00:00.19
+'MMF_9_13_IDX dropped'

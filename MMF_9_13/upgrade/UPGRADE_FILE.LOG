@@ -1,0 +1,379 @@
+Connected.
+
+Table created.
+
+Elapsed: 00:00:00.02
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.01
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_driver_statistic_driver_IDX on driver_statistic(driver_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_driver_statistic_driver_IDX on driver_statistic(driver_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_driver_statistic_constructor_IDX on driver_statistic(constructor_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_driver_statistic_constructor_IDX on driver_statistic(constructor_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_driver_statistic_season_IDX on driver_statistic(season_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_driver_statistic_season_IDX on driver_statistic(season_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.01
+old   1: create index FK_constructor_statistic_constructor_IDX on constructor_statistic(constructor_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_constructor_statistic_constructor_IDX on constructor_statistic(constructor_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_constructor_statistic_season_IDX on constructor_statistic(season_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_constructor_statistic_season_IDX on constructor_statistic(season_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.01
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_season_event_season_IDX on season_event(season_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_season_event_season_IDX on season_event(season_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_season_event_event_IDX on season_event(event_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_season_event_event_IDX on season_event(event_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_season_event_circuit_IDX on season_event(circuit_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_season_event_circuit_IDX on season_event(circuit_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.01
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.01
+old   1: create index FK_event_driver_event_IDX on event_driver(event_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_driver_event_IDX on event_driver(event_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_event_driver_driver_IDX on event_driver(driver_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_driver_driver_IDX on event_driver(driver_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_event_driver_constructor_IDX on event_driver(constructor_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_driver_constructor_IDX on event_driver(constructor_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+
+Table altered.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_event_statistic_event_IDX on event_statistic(event_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_statistic_event_IDX on event_statistic(event_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_event_statistic_season_IDX on event_statistic(season_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_statistic_season_IDX on event_statistic(season_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_event_statistic_winner_IDX on event_statistic(winner_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_statistic_winner_IDX on event_statistic(winner_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00
+old   1: create index FK_event_statistic_pole_IDX on event_statistic(pole_position_id) tablespace &&INDEX_TABLESPACE
+new   1: create index FK_event_statistic_pole_IDX on event_statistic(pole_position_id) tablespace MMF_9_13_IDX
+
+Index created.
+
+Elapsed: 00:00:00.00

@@ -1,160 +1,209 @@
-MERGE INTO SEASON
-    USING (
-        SELECT DISTINCT SEASON 
-        FROM DATA_TABLE
-    ) TMP
-    ON (SEASON.NAME = TMP.SEASON)
-WHEN NOT MATCHED THEN
-    INSERT (NAME) VALUES (TMP.SEASON);
+
+
+merge into driver
+    using (
+        select distinct
+        dt.driver d_name,
+        dt.driver_wins d_win
+        from data_table dt
+    ) tmp
+    on (
+    tmp.d_name = driver.name and
+    tmp.d_win = driver.wins
+    )
+when not matched then 
+    insert (
+    driver.name,
+    driver.wins
+    ) values (
+    tmp.d_name,
+    tmp.d_win
+    );
+
+merge into constructor 
+    using (
+        select distinct
+        dt.constructor con_name,
+        dt.constructor_wins con_win
+        from data_table dt
+    ) tmp
+    on (
+    tmp.con_name = constructor.name and
+    tmp.con_win = constructor.wins
+    )
+when not matched then
+    insert (
+    constructor.name,
+    constructor.wins
+    ) values (
+    tmp.con_name, 
+    tmp.con_win
+    );
     
-MERGE INTO CIRCUIT 
-    USING (
-        SELECT DISTINCT CIRCUIT 
-        FROM DATA_TABLE
-    ) TMP
-    ON (TMP.CIRCUIT = CIRCUIT.NAME)
-WHEN NOT MATCHED THEN
-    INSERT (NAME) VALUES (TMP.CIRCUIT);
-        
-MERGE INTO CONSTRUCTOR
-    USING (
-        SELECT DISTINCT
-        CONSTRUCTOR,
-        CONSTRUCTOR_WINS WINS
-        FROM DATA_TABLE
-    ) TMP
-    ON (TMP.CONSTRUCTOR = CONSTRUCTOR.NAME AND CONSTRUCTOR.WINS = TMP.WINS)
-WHEN NOT MATCHED THEN
-    INSERT (NAME, WINS) VALUES (TMP.CONSTRUCTOR, TMP.WINS);
-
-MERGE INTO DRIVER
-    USING (
-        SELECT DISTINCT
-        DRIVER,
-        DRIVER_WINS
-        FROM DATA_TABLE DT
-    ) TMP
-    ON (TMP.DRIVER_WINS = DRIVER.WINS AND TMP.DRIVER = DRIVER.NAME)
-WHEN NOT MATCHED THEN
-    INSERT (NAME, WINS) VALUES (TMP.DRIVER, TMP.DRIVER_WINS);
-
-MERGE INTO EVENT 
-    USING (
-        SELECT distinct
-            DT.EVENT EV, 
-            DT."Date" DATETIME,
-            CIRCUIT.ID CIRC_ID,
-            DT.LAPS LAPS,
-            DR.ID POLE,
-            SEASON.ID SES_ID,
-            WIN.ID WIN_ID
-        FROM DATA_TABLE DT
-        LEFT JOIN CIRCUIT 
-        ON CIRCUIT.NAME = DT.CIRCUIT
-        LEFT JOIN DRIVER DR
-        ON DR.NAME = DT.POLE_POSITION
-        LEFT JOIN SEASON
-        ON SEASON.NAME = DT.SEASON
-        LEFT JOIN DRIVER WIN
-        ON WIN.NAME = DT.WINNER
-    ) TMP
-    ON (
-    TMP.EV = EVENT.NAME AND 
-    TMP.DATETIME = EVENT.DATETIME AND 
-    TMP.CIRC_ID = EVENT.CIRCUIT_ID AND 
-    EVENT.POLE_POSITION_ID = TMP.POLE AND 
-    EVENT.SEASON_ID = TMP.SES_ID AND
-    EVENT.WINNER_ID = TMP.WIN_ID
+merge into season
+    using (
+        select distinct
+        dt.season name
+        from data_table dt
+    ) tmp
+    on (
+    season.name = tmp.name
     )
-WHEN NOT MATCHED THEN
-    INSERT (
-    NAME, 
-    DATETIME, 
-    CIRCUIT_ID, 
-    LAPS, 
-    POLE_POSITION_ID, 
-    SEASON_ID,
-    WINNER_ID) VALUES (
-    TMP.EV, 
-    TMP.DATETIME, 
-    TMP.CIRC_ID, 
-    TMP.LAPS, 
-    POLE, 
-    TMP.SES_ID,
-    TMP.WIN_ID
+when not matched then
+    insert (
+    season.name
+    ) values (
+    tmp.name
     );
 
-MERGE INTO SEASON_EVENT
-    USING (
-        SELECT DISTINCT
-        SEASON.ID SES_ID,
-        EVENT.ID EV_ID
-        FROM DATA_TABLE DT
-        RIGHT JOIN SEASON
-        ON SEASON.NAME = DT.SEASON
-        RIGHT JOIN EVENT
-        ON DT.EVENT = EVENT.NAME AND EVENT.DATETIME = DT."Date"
-    ) TMP
-    ON (
-    SEASON_EVENT.SEASON_ID = TMP.SES_ID AND
-    SEASON_EVENT.EVENT_ID = TMP.EV_ID
+merge into circuit 
+    using (
+        select distinct
+        dt.circuit c_name
+        from data_table dt
+    ) tmp
+    on (
+    circuit.name = tmp.c_name
     )
-WHEN NOT MATCHED THEN
-    INSERT (
-    SEASON_ID,
-    EVENT_ID ) VALUES (
-    TMP.SES_ID,
-    TMP.EV_ID
+when not matched then
+    insert (
+    circuit.name
+    ) values (
+    tmp.c_name
     );
 
-MERGE INTO EVENT_DRIVER 
-    USING (
-        SELECT DISTINCT 
-        DT.POINTS POINTS,
-        CONSTRUCTOR.ID CON_ID,
-        DT.START_DRIVER_PLACE START_POSITION,
-        DT.TIME TIME,
-        DRIVER.ID DRI_ID
-        FROM DATA_TABLE DT
-        LEFT JOIN CONSTRUCTOR
-        ON CONSTRUCTOR.NAME = DT.CONSTRUCTOR  
-        LEFT JOIN DRIVER
-        ON DT.DRIVER = DRIVER.NAME
-    ) TMP
-    ON (
-    TMP.POINTS = EVENT_DRIVER.POINTS AND 
-    TMP.CON_ID = EVENT_DRIVER.CONSTRUCTOR_ID AND 
-    TMP.START_POSITION = EVENT_DRIVER.START_POSITION AND 
-    TMP.POINTS = EVENT_DRIVER.POINTS AND 
-    TMP.TIME = EVENT_DRIVER.TIME
+
+merge into event
+    using (
+        select distinct
+        dt."Date" e_date,
+        dt.event e_name
+        from data_table dt
+    ) tmp 
+    on (
+    event.name = tmp.e_name and
+    event.e_date = to_date(tmp.e_date,'mm/dd/yyyy')
     )
-WHEN NOT MATCHED THEN 
-    INSERT( 
-    DRIVER_ID, 
-    CONSTRUCTOR_ID, 
-    START_POSITION, 
-    POINTS, 
-    TIME
-    ) VALUES (
-    TMP.DRI_ID, 
-    TMP.CON_ID, 
-    TMP.START_POSITION, 
-    TMP.POINTS, 
-    TMP.TIME
+when not matched then
+    insert (
+    event.name,
+    event.e_date
+    ) values (
+    tmp.e_name,
+    to_date(tmp.e_date,'mm/dd/yyyy')
+    );
+    
+    
+
+merge into event_statistic
+    using (
+        select distinct
+        e.id e_id,
+        d.id d_id,
+        pole.id p_id,
+        dt.laps laps,
+        s.id s_id
+        from data_table dt
+        left join event e
+        on e.name = dt.event
+        left join driver d
+        on d.name = dt.winner
+        left join driver pole
+        on pole.name = dt.pole_position
+        left join season s
+        on s.name = dt.season
+    ) tmp
+    on (
+    event_statistic.event_id = tmp.e_id and
+    event_statistic.season_id = tmp.s_id and
+    event_statistic.winner_id = tmp.d_id and
+    event_statistic.pole_position_id = tmp.p_id and
+    event_statistic.laps = tmp.laps
+    ) 
+when not matched then
+    insert (
+    event_statistic.event_id,
+    event_statistic.season_id,
+    event_statistic.winner_id,
+    event_statistic.pole_position_id,
+    event_statistic.laps
+    ) values (
+    tmp.e_id,
+    tmp.s_id,
+    tmp.d_id,
+    tmp.p_id,
+    tmp.laps
     );
 
-MERGE INTO EVENT_DRIVER
-    USING (
-        SELECT DISTINCT
-        EVENT.ID EV_ID,
-        DT.EVENT,
-        DT.TIME
-        FROM EVENT
-        RIGHT JOIN DATA_TABLE DT
-        ON DT.EVENT = EVENT.NAME AND DT."Date" = EVENT.DATETIME
-    ) TMP
-    ON (
-    EVENT_DRIVER.TIME = TMP.TIME
+
+merge into event_driver 
+    using (
+        select distinct
+        dt.start_driver_place s_pos,
+        d.id d_id,
+        dt.points pts,
+        dt.time d_time,
+        c.id c_id,
+        e.id e_id
+        from data_table dt
+        left join driver d
+        on d.name = dt.driver
+        left join constructor c
+        on c.name = dt.constructor
+        left join event e
+        on e.name = dt.event and to_date(dt."Date", 'mm/dd/yyyy') = e.e_date
+    ) tmp
+    on (
+    event_driver.event_id = tmp.e_id and
+    event_driver.driver_id = tmp.d_id and
+    event_driver.constructor_id = tmp.c_id and
+    event_driver.start_position = tmp.s_pos and
+    event_driver.points = tmp.pts and
+    event_driver.time = tmp.d_time 
     )
-WHEN MATCHED THEN
-    UPDATE SET EVENT_ID = TMP.EV_ID;
+when not matched then
+    insert (
+    event_driver.event_id,
+    event_driver.driver_id,
+    event_driver.constructor_id,
+    event_driver.start_position,
+    event_driver.points,
+    event_driver.time
+    ) values (
+    tmp.e_id,
+    tmp.d_id,
+    tmp.c_id,
+    tmp.s_pos,
+    tmp.pts,
+    tmp.d_time
+    );
+    
+merge into season_event 
+    using (
+        select distinct
+        s.id s_id,
+        e.id e_id,
+        circ.id c_id
+        from data_table dt
+        left join event e
+        on e.name = dt.event and to_date(dt."Date", 'mm/dd/yyyy') = e.e_date
+        left join season s
+        on s.name = dt.season
+        left join circuit circ
+        on circ.name = dt.circuit
+    ) tmp
+    on (
+    season_event.season_id = tmp.s_id and
+    season_event.event_id = tmp.e_id and
+    season_event.circuit_id = tmp.c_id 
+    )
+when not matched then
+    insert (
+    season_event.season_id,
+    season_event.event_id,
+    season_event.circuit_id
+    ) values (
+    tmp.s_id,
+    tmp.e_id,
+    tmp.c_id
+    );

@@ -1,24 +1,40 @@
 DEFINE USER_NAME = &&1
 DEFINE INDEX_TABLESPACE = '&&USER_NAME._IDX'
 
-ALTER TABLE SEASON_EVENT ADD CONSTRAINT FK_SEASON_EVENT_SEASON FOREIGN KEY (SEASON_ID) REFERENCES SEASON(ID) ON DELETE CASCADE;
-CREATE INDEX FK_SEASON_EVENT_SEASON_INDEX ON SEASON_EVENT(SEASON_ID) TABLESPACE &&INDEX_TABLESPACE;
-ALTER TABLE SEASON_EVENT ADD CONSTRAINT FK_SEASON_EVENT_EVENT FOREIGN KEY (EVENT_ID) REFERENCES EVENT(ID) ON DELETE CASCADE;
-CREATE INDEX FK_SEASON_EVENT_EVENT_INDEX ON SEASON_EVENT(EVENT_ID) TABLESPACE &&INDEX_TABLESPACE;
+alter table driver_statistic add constraint FK_driver_statistic_driver foreign key (driver_id) references driver(id) on delete cascade;
+alter table driver_statistic add constraint FK_driver_statistic_constructor foreign key (constructor_id) references constructor(id) on delete cascade;
+alter table driver_statistic add constraint FK_driver_statistic_season foreign key (season_id) references season(id) on delete cascade;
+create index FK_driver_statistic_driver_IDX on driver_statistic(driver_id) tablespace &&INDEX_TABLESPACE;
+create index FK_driver_statistic_constructor_IDX on driver_statistic(constructor_id) tablespace &&INDEX_TABLESPACE;
+create index FK_driver_statistic_season_IDX on driver_statistic(season_id) tablespace &&INDEX_TABLESPACE;
 
-ALTER TABLE EVENT ADD CONSTRAINT FK_EVENT_CIRCUIT FOREIGN KEY (CIRCUIT_ID) REFERENCES CIRCUIT(ID) ON DELETE SET NULL;
-CREATE INDEX FK_EVENT_CIRCUIT_INDEX ON EVENT(CIRCUIT_ID) TABLESPACE &&INDEX_TABLESPACE;
-ALTER TABLE EVENT ADD CONSTRAINT FK_EVENT_WINNER FOREIGN KEY (WINNER_ID) REFERENCES DRIVER(ID) ON DELETE SET NULL;
-CREATE INDEX FK_EVENT_WINNER_INDEX ON EVENT(WINNER_ID) TABLESPACE &&INDEX_TABLESPACE;
-ALTER TABLE EVENT ADD CONSTRAINT FK_EVENT_POLE FOREIGN KEY (POLE_POSITION_ID) REFERENCES DRIVER(ID) ON DELETE SET NULL;
-CREATE INDEX FK_EVENT_POLE_INDEX ON EVENT(POLE_POSITION_ID) TABLESPACE &&INDEX_TABLESPACE;
+alter table constructor_statistic add constraint FK_constructor_statistic_constructor foreign key (constructor_id) references constructor(id) on delete cascade;
+alter table constructor_statistic add constraint FK_constructor_statistic_season foreign key (season_id) references season(id) on delete cascade;
+create index FK_constructor_statistic_constructor_IDX on constructor_statistic(constructor_id) tablespace &&INDEX_TABLESPACE;
+create index FK_constructor_statistic_season_IDX on constructor_statistic(season_id) tablespace &&INDEX_TABLESPACE;
 
-ALTER TABLE EVENT_DRIVER ADD CONSTRAINT FK_EVENT_DRIVER_EVENT FOREIGN KEY (EVENT_ID) REFERENCES EVENT(ID) ON DELETE CASCADE;
-CREATE INDEX FK_EVENT_DRIVER_EVENT_INDEX ON EVENT_DRIVER(EVENT_ID) TABLESPACE &&INDEX_TABLESPACE;
-ALTER TABLE EVENT_DRIVER ADD CONSTRAINT FK_EVENT_DRIVER_DRIVER FOREIGN KEY (DRIVER_ID) REFERENCES DRIVER(ID) ON DELETE CASCADE;
-CREATE INDEX FK_EVENT_DRIVER_DRIVER_INDEX ON EVENT_DRIVER(DRIVER_ID) TABLESPACE &&INDEX_TABLESPACE;
-ALTER TABLE EVENT_DRIVER ADD CONSTRAINT FK_EVENT_DRIVER_CONSTRUCTOR FOREIGN KEY (CONSTRUCTOR_ID) REFERENCES CONSTRUCTOR(ID) ON DELETE CASCADE;
-CREATE INDEX FK_EVENT_DRIVER_CONSTRUCTOR_INDEX ON EVENT_DRIVER(CONSTRUCTOR_ID) TABLESPACE &&INDEX_TABLESPACE;
+alter table season_event add constraint FK_season_event_season foreign key (season_id) references season(id) on delete cascade;
+alter table season_event add constraint FK_season_event_event foreign key (event_id) references event(id) on delete cascade;
+alter table season_event add constraint FK_season_event_circuit foreign key (circuit_id) references circuit(id) on delete set null;
+create index FK_season_event_season_IDX on season_event(season_id) tablespace &&INDEX_TABLESPACE;
+create index FK_season_event_event_IDX on season_event(event_id) tablespace &&INDEX_TABLESPACE;
+create index FK_season_event_circuit_IDX on season_event(circuit_id) tablespace &&INDEX_TABLESPACE;
+
+alter table event_driver add constraint FK_event_driver_event foreign key (event_id) references event(id) on delete cascade;
+alter table event_driver add constraint FK_event_driver_driver foreign key (driver_id) references driver(id) on delete cascade;
+alter table event_driver add constraint FK_event_driver_constructor foreign key (constructor_id) references constructor(id) on delete cascade;
+create index FK_event_driver_event_IDX on event_driver(event_id) tablespace &&INDEX_TABLESPACE;
+create index FK_event_driver_driver_IDX on event_driver(driver_id) tablespace &&INDEX_TABLESPACE;
+create index FK_event_driver_constructor_IDX on event_driver(constructor_id) tablespace &&INDEX_TABLESPACE;
+
+alter table event_statistic add constraint FK_event_statistic_event foreign key (event_id) references event(id) on delete cascade;
+alter table event_statistic add constraint FK_event_statistic_season foreign key (season_id) references season(id) on delete cascade;
+alter table event_statistic add constraint FK_event_statistic_winner foreign key (winner_id) references driver(id) on delete cascade;
+alter table event_statistic add constraint FK_event_statistic_pole foreign key (pole_position_id) references driver(id) on delete cascade;
+create index FK_event_statistic_event_IDX on event_statistic(event_id) tablespace &&INDEX_TABLESPACE;
+create index FK_event_statistic_season_IDX on event_statistic(season_id) tablespace &&INDEX_TABLESPACE;
+create index FK_event_statistic_winner_IDX on event_statistic(winner_id) tablespace &&INDEX_TABLESPACE;
+create index FK_event_statistic_pole_IDX on event_statistic(pole_position_id) tablespace &&INDEX_TABLESPACE;
 
 UNDEFINE USER_NAME
 UNDEFINE INDEX_TABLESPACE

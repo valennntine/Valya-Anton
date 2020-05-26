@@ -1,8 +1,8 @@
 CREATE TABLE CONSTRUCTOR (
-    ID NUMBER GENERATED ALWAYS AS IDENTITY INCREMENT BY 1 START WITH 1 MINVALUE 1 NOT NULL,
-    NAME VARCHAR2(200),
-    WINS NUMBER,
-    CONSTRAINT PK_CONSTRUCTOR PRIMARY KEY (ID) ENABLE
+    id number generated always as identity increment by 1 start with 1 minvalue 1 not null,
+    name varchar2(200),
+    wins number,
+    constraint PK_construcotr primary key (id) enable
 );
 
 COMMENT ON COLUMN CONSTRUCTOR.ID IS 'Unique identifier';

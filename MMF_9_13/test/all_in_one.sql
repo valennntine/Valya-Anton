@@ -1,4 +1,7 @@
 
+
+
+
 CREATE TABLE DATA_TABLE (
     Season VARCHAR2(200),
     "Date" VARCHAR2(200),
@@ -39,3 +42,256 @@ INSERT INTO DATA_TABLE(Season,"Date",Event,Circuit,Driver,Constructor,Laps,Time,
 INSERT INTO DATA_TABLE(Season,"Date",Event,Circuit,Driver,Constructor,Laps,Time,Points,Start_driver_place,Pole_position,Winner,Driver_Wins,Constructor_Wins) VALUES('2018 SEASON','04-15-2018','Chinese Grand Prix','Shanghai International Circuit','Valtteri Bottas','Mercedes','56','8.894','18','1','Sebastian Vettel','Daniel Ricciardo','7','102');
 INSERT INTO DATA_TABLE(Season,"Date",Event,Circuit,Driver,Constructor,Laps,Time,Points,Start_driver_place,Pole_position,Winner,Driver_Wins,Constructor_Wins) VALUES('2018 SEASON','04-15-2018','Chinese Grand Prix','Shanghai International Circuit','Kimi Räikkönen','Ferrari','56','9.637','15','3','Sebastian Vettel','Daniel Ricciardo','21','239');
 
+
+merge into driver
+    using (
+        select distinct
+        dt.driver d_name,
+        dt.driver_wins d_win
+        from data_table dt
+    ) tmp
+    on (
+    tmp.d_name = driver.name and
+    tmp.d_win = driver.wins
+    )
+when not matched then 
+    insert (
+    driver.name,
+    driver.wins
+    ) values (
+    tmp.d_name,
+    tmp.d_win
+    );
+    
+-- delete from driver;
+    
+--select * from driver;
+
+
+merge into constructor 
+    using (
+        select distinct
+        dt.constructor con_name,
+        dt.constructor_wins con_win
+        from data_table dt
+    ) tmp
+    on (
+    tmp.con_name = constructor.name and
+    tmp.con_win = constructor.wins
+    )
+when not matched then
+    insert (
+    constructor.name,
+    constructor.wins
+    ) values (
+    tmp.con_name, 
+    tmp.con_win
+    );
+    
+merge into season
+    using (
+        select distinct
+        dt.season name
+        from data_table dt
+    ) tmp
+    on (
+    season.name = tmp.name
+    )
+when not matched then
+    insert (
+    season.name
+    ) values (
+    tmp.name
+    );
+
+merge into circuit 
+    using (
+        select distinct
+        dt.circuit c_name
+        from data_table dt
+    ) tmp
+    on (
+    circuit.name = tmp.c_name
+    )
+when not matched then
+    insert (
+    circuit.name
+    ) values (
+    tmp.c_name
+    );
+
+
+merge into event
+    using (
+        select distinct
+        dt."Date" e_date,
+        dt.event e_name
+        from data_table dt
+    ) tmp 
+    on (
+    event.name = tmp.e_name and
+    event.e_date = to_date(tmp.e_date,'mm/dd/yyyy')
+    )
+when not matched then
+    insert (
+    event.name,
+    event.e_date
+    ) values (
+    tmp.e_name,
+    to_date(tmp.e_date,'mm/dd/yyyy')
+    );
+    
+    
+
+merge into event_statistic
+    using (
+        select distinct
+        e.id e_id,
+        d.id d_id,
+        pole.id p_id,
+        dt.laps laps,
+        s.id s_id
+        from data_table dt
+        left join event e
+        on e.name = dt.event
+        left join driver d
+        on d.name = dt.winner
+        left join driver pole
+        on pole.name = dt.pole_position
+        left join season s
+        on s.name = dt.season
+    ) tmp
+    on (
+    event_statistic.event_id = tmp.e_id and
+    event_statistic.season_id = tmp.s_id and
+    event_statistic.winner_id = tmp.d_id and
+    event_statistic.pole_position_id = tmp.p_id and
+    event_statistic.laps = tmp.laps
+    ) 
+when not matched then
+    insert (
+    event_statistic.event_id,
+    event_statistic.season_id,
+    event_statistic.winner_id,
+    event_statistic.pole_position_id,
+    event_statistic.laps
+    ) values (
+    tmp.e_id,
+    tmp.s_id,
+    tmp.d_id,
+    tmp.p_id,
+    tmp.laps
+    );
+
+
+merge into event_driver 
+    using (
+        select distinct
+        dt.start_driver_place s_pos,
+        d.id d_id,
+        dt.points pts,
+        dt.time d_time,
+        c.id c_id,
+        e.id e_id
+        from data_table dt
+        left join driver d
+        on d.name = dt.driver
+        left join constructor c
+        on c.name = dt.constructor
+        left join event e
+        on e.name = dt.event and to_date(dt."Date", 'mm/dd/yyyy') = e.e_date
+    ) tmp
+    on (
+    event_driver.event_id = tmp.e_id and
+    event_driver.driver_id = tmp.d_id and
+    event_driver.constructor_id = tmp.c_id and
+    event_driver.start_position = tmp.s_pos and
+    event_driver.points = tmp.pts and
+    event_driver.time = tmp.d_time 
+    )
+when not matched then
+    insert (
+    event_driver.event_id,
+    event_driver.driver_id,
+    event_driver.constructor_id,
+    event_driver.start_position,
+    event_driver.points,
+    event_driver.time
+    ) values (
+    tmp.e_id,
+    tmp.d_id,
+    tmp.c_id,
+    tmp.s_pos,
+    tmp.pts,
+    tmp.d_time
+    );
+    
+merge into season_event 
+    using (
+        select distinct
+        s.id s_id,
+        e.id e_id,
+        circ.id c_id
+        from data_table dt
+        left join event e
+        on e.name = dt.event and to_date(dt."Date", 'mm/dd/yyyy') = e.e_date
+        left join season s
+        on s.name = dt.season
+        left join circuit circ
+        on circ.name = dt.circuit
+    ) tmp
+    on (
+    season_event.season_id = tmp.s_id and
+    season_event.event_id = tmp.e_id and
+    season_event.circuit_id = tmp.c_id 
+    )
+when not matched then
+    insert (
+    season_event.season_id,
+    season_event.event_id,
+    season_event.circuit_id
+    ) values (
+    tmp.s_id,
+    tmp.e_id,
+    tmp.c_id
+    );
+
+
+
+create view test_view as 
+select 
+ses.name Season,
+to_char(e.e_date, 'mm-dd-yyyy') "Date",
+e.name Event,
+circ.name Circuit,
+d.name Driver,
+c.name Constructor,
+es.laps Laps,
+ed.time Time,
+ed.points Points,
+ed.start_position Start_driver_place,
+pole.name Pole_position,
+win.name Winner,
+d.wins Driver_Wins,
+c.wins Constructor_Wins
+from event_driver ed
+left join driver d
+on d.id = ed.driver_id
+left join constructor c
+on c.id = ed.constructor_id
+left join event e
+on e.id = ed.event_id
+left join season_event se
+on se.event_id = e.id
+left join circuit circ
+on circ.id = se.circuit_id
+left join season ses
+on ses.id = se.season_id
+left join event_statistic es
+on es.event_id = e.id
+left join driver pole
+on pole.id = es.pole_position_id
+left join driver win
+on win.id = es.winner_id;
+
+select * from data_table minus select * from wow;

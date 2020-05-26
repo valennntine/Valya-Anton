@@ -3,17 +3,18 @@ CREATE TABLE EVENT_DRIVER (
     EVENT_ID NUMBER,
     DRIVER_ID NUMBER,
     CONSTRUCTOR_ID NUMBER,
-    START_POSITION NUMBER,
+    start_position number,
+    finish_position number,
     POINTS NUMBER,
     TIME VARCHAR2(100),
     CONSTRAINT PK_EVENT_DRIVER PRIMARY KEY (ID) ENABLE
 );
 
-
 COMMENT ON COLUMN EVENT_DRIVER.ID IS 'Unique identifier';
 COMMENT ON COLUMN EVENT_DRIVER.EVENT_ID IS 'Reference on event table';
 COMMENT ON COLUMN EVENT_DRIVER.DRIVER_ID IS 'Reference on driver table';
 COMMENT ON COLUMN EVENT_DRIVER.CONSTRUCTOR_ID IS 'Reference on constructor table';
-COMMENT ON COLUMN EVENT_DRIVER.START_POSITION IS 'The digit of position on circuit';
+COMMENT ON COLUMN EVENT_DRIVER.START_POSITION IS 'The digit of start position on circuit';
+COMMENT ON COLUMN EVENT_DRIVER.START_POSITION IS 'The digit of finish position on circuit';
 COMMENT ON COLUMN EVENT_DRIVER.POINTS IS 'The number of points driver got';
 COMMENT ON COLUMN EVENT_DRIVER.TIME IS 'Time offset on finish';
