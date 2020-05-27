@@ -1,50 +1,47 @@
 Enter value for 1: MMF_9_13
-Enter value for 2: c:\users\xiaomi\desktop\hackerc\
+Enter value for 2: E:\DB\
 "execute create_tablespace.sql for data tablespace"
 "user_name = MMF_9_13"
-"file location = c:\users\xiaomi\desktop\hackerc\"
+"file location = E:\DB\"
 old   1: CREATE TABLESPACE &&DATA_TBSP_NAME
 new   1: CREATE TABLESPACE MMF_9_13_DATA
 old   2:     DATAFILE '&&DATA_FILE_NAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
-new   2:     DATAFILE 'c:\users\xiaomi\desktop\hackerc\MMF_9_13_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   2:     DATAFILE 'E:\DB\MMF_9_13_DATA.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 
 Tablespace created.
 
-Elapsed: 00:00:00.06
+Elapsed: 00:00:00.24
 "execute create_tablespace.sql for index tablespace"
 "user_name = MMF_9_13"
-"file location = c:\users\xiaomi\desktop\hackerc\"
+"file location = E:\DB\"
 old   1: CREATE TABLESPACE &&DATA_TBSP_NAME
 new   1: CREATE TABLESPACE MMF_9_13_IDX
 old   2:     DATAFILE '&&DATA_FILE_NAME' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
-new   2:     DATAFILE 'c:\users\xiaomi\desktop\hackerc\MMF_9_13_IDX.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
+new   2:     DATAFILE 'E:\DB\MMF_9_13_IDX.dbf' SIZE 10M AUTOEXTEND ON NEXT 10M MAXSIZE 10G
 
 Tablespace created.
 
-Elapsed: 00:00:00.05
+Elapsed: 00:00:00.19
 old   1: CREATE USER &&USER_NAME
 new   1: CREATE USER MMF_9_13
 old   3:     DEFAULT TABLESPACE &&USER_NAME._DATA
 new   3:     DEFAULT TABLESPACE MMF_9_13_DATA
-CREATE USER MMF_9_13
-            *
-ERROR at line 1:
-ORA-01920: user name 'MMF_9_13' conflicts with another user or role name 
 
+User created.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.04
 old   1: ALTER USER &&USER_NAME QUOTA UNLIMITED ON &&USER_NAME._DATA
 new   1: ALTER USER MMF_9_13 QUOTA UNLIMITED ON MMF_9_13_DATA
 
 User altered.
 
-Elapsed: 00:00:00.02
+Elapsed: 00:00:00.03
 old   1: ALTER USER &&USER_NAME QUOTA UNLIMITED ON &&USER_NAME._IDX
 new   1: ALTER USER MMF_9_13 QUOTA UNLIMITED ON MMF_9_13_IDX
 
 User altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 old   1: GRANT CREATE PROCEDURE TO &&USER_NAME
 new   1: GRANT CREATE PROCEDURE TO MMF_9_13
 

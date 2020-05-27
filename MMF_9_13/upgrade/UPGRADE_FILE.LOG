@@ -1,4 +1,93 @@
+Enter value for 1: MMF_9_13
 Connected.
+
+Table created.
+
+Elapsed: 00:00:00.03
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Table created.
+
+Elapsed: 00:00:00.01
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
 
 Table created.
 
@@ -20,25 +109,33 @@ Comment created.
 
 Elapsed: 00:00:00.00
 
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
 Table created.
 
+Elapsed: 00:00:00.01
+
+Comment created.
+
 Elapsed: 00:00:00.00
 
 Comment created.
 
 Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.00
+
+Comment created.
+
+Elapsed: 00:00:00.01
 
 Comment created.
 
@@ -88,22 +185,6 @@ Comment created.
 
 Elapsed: 00:00:00.00
 
-Table created.
-
-Elapsed: 00:00:00.01
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
 Comment created.
 
 Elapsed: 00:00:00.00
@@ -111,86 +192,6 @@ Elapsed: 00:00:00.00
 Table created.
 
 Elapsed: 00:00:00.01
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Table created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Table created.
-
-Elapsed: 00:00:00.01
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Comment created.
-
-Elapsed: 00:00:00.00
-
-Table created.
-
-Elapsed: 00:00:00.00
 
 Comment created.
 
@@ -230,7 +231,7 @@ Elapsed: 00:00:00.00
 
 Table altered.
 
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.02
 
 Table altered.
 
@@ -260,11 +261,11 @@ Elapsed: 00:00:00.00
 
 Table altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 
 Table altered.
 
-Elapsed: 00:00:00.01
+Elapsed: 00:00:00.00
 old   1: create index FK_constructor_statistic_constructor_IDX on constructor_statistic(constructor_id) tablespace &&INDEX_TABLESPACE
 new   1: create index FK_constructor_statistic_constructor_IDX on constructor_statistic(constructor_id) tablespace MMF_9_13_IDX
 
@@ -284,11 +285,11 @@ Elapsed: 00:00:00.01
 
 Table altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 
 Table altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 old   1: create index FK_season_event_season_IDX on season_event(season_id) tablespace &&INDEX_TABLESPACE
 new   1: create index FK_season_event_season_IDX on season_event(season_id) tablespace MMF_9_13_IDX
 
@@ -340,15 +341,15 @@ Elapsed: 00:00:00.00
 
 Table altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 
 Table altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 
 Table altered.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 
 Table altered.
 
@@ -358,7 +359,7 @@ new   1: create index FK_event_statistic_event_IDX on event_statistic(event_id) 
 
 Index created.
 
-Elapsed: 00:00:00.00
+Elapsed: 00:00:00.01
 old   1: create index FK_event_statistic_season_IDX on event_statistic(season_id) tablespace &&INDEX_TABLESPACE
 new   1: create index FK_event_statistic_season_IDX on event_statistic(season_id) tablespace MMF_9_13_IDX
 

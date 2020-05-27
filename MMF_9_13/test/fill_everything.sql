@@ -1,5 +1,3 @@
-
-
 merge into driver
     using (
         select distinct
@@ -19,6 +17,8 @@ when not matched then
     tmp.d_name,
     tmp.d_win
     );
+    
+
 
 merge into constructor 
     using (
@@ -105,7 +105,7 @@ merge into event_statistic
         s.id s_id
         from data_table dt
         left join event e
-        on e.name = dt.event
+        on e.name = dt.event and to_date(dt."Date",'mm/dd/yyyy') = e.e_date
         left join driver d
         on d.name = dt.winner
         left join driver pole
@@ -135,6 +135,7 @@ when not matched then
     tmp.laps
     );
 
+delete from event_statistic
 
 merge into event_driver 
     using (
@@ -207,3 +208,5 @@ when not matched then
     tmp.e_id,
     tmp.c_id
     );
+
+commit;

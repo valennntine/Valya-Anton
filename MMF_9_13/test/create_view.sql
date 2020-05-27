@@ -1,5 +1,5 @@
 create view test_view as 
-select 
+select distinct
 ses.name Season,
 to_char(e.e_date, 'mm-dd-yyyy') "Date",
 e.name Event,
@@ -33,3 +33,5 @@ left join driver pole
 on pole.id = es.pole_position_id
 left join driver win
 on win.id = es.winner_id;
+
+commit;

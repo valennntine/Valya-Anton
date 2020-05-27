@@ -153,7 +153,7 @@ merge into event_statistic
         s.id s_id
         from data_table dt
         left join event e
-        on e.name = dt.event
+        on e.name = dt.event and to_date(dt."Date",'mm/dd/yyyy') = e.e_date
         left join driver d
         on d.name = dt.winner
         left join driver pole
@@ -183,6 +183,7 @@ when not matched then
     tmp.laps
     );
 
+delete from event_statistic
 
 merge into event_driver 
     using (
@@ -259,7 +260,7 @@ when not matched then
 
 
 create view test_view as 
-select 
+select distinct
 ses.name Season,
 to_char(e.e_date, 'mm-dd-yyyy') "Date",
 e.name Event,
@@ -294,4 +295,4 @@ on pole.id = es.pole_position_id
 left join driver win
 on win.id = es.winner_id;
 
-select * from data_table minus select * from wow;
+select * from data_table minus select * from test_view;

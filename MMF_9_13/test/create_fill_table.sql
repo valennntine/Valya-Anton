@@ -39,3 +39,4 @@ INSERT INTO DATA_TABLE(Season,"Date",Event,Circuit,Driver,Constructor,Laps,Time,
 INSERT INTO DATA_TABLE(Season,"Date",Event,Circuit,Driver,Constructor,Laps,Time,Points,Start_driver_place,Pole_position,Winner,Driver_Wins,Constructor_Wins) VALUES('2018 SEASON','04-15-2018','Chinese Grand Prix','Shanghai International Circuit','Valtteri Bottas','Mercedes','56','8.894','18','1','Sebastian Vettel','Daniel Ricciardo','7','102');
 INSERT INTO DATA_TABLE(Season,"Date",Event,Circuit,Driver,Constructor,Laps,Time,Points,Start_driver_place,Pole_position,Winner,Driver_Wins,Constructor_Wins) VALUES('2018 SEASON','04-15-2018','Chinese Grand Prix','Shanghai International Circuit','Kimi Räikkönen','Ferrari','56','9.637','15','3','Sebastian Vettel','Daniel Ricciardo','21','239');
 
+commit;
