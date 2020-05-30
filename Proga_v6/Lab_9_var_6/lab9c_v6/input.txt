@@ -1,0 +1,4 @@
+3.14 hello 2 d
+f 4 r 4 w 4 y
+0.5345 2.7 that
+goodbye 5467

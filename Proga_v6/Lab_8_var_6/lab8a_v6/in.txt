@@ -1,0 +1,10 @@
+name1
+true
+name2
+false
+name3
+false
+name4
+true
+name5
+false
